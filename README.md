@@ -1,4 +1,5 @@
-Contact : https://t.me/tahammulsuz
+# Contact : https://t.me/tahammulsuz
+# Stealer project : https://github.com/yanaksalvo/Hades-Stealer
 
 # 🤖 Hadestealer Bot
 
